@@ -10,6 +10,14 @@ import javax.persistence.Table;
 @Entity
 @Table(name="formateur")
 
+/**
+ * Le formateur est une table qui représente la personne qui va former les participants
+ * Il a une Id générée automatiquement, nom, prénom, date de naissance, téléphone, émail
+ * @author Mohammed TELIDJANE
+ *
+ */
+
+
 public class Formateur {
 	
 	@Id

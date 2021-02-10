@@ -13,6 +13,12 @@ import javax.persistence.Table;
 @Table(name="entreprise")
 
 
+/**
+ * Entreprise est table qui représente la structure qui fait la demande de formation pour ses employés 
+ * Elle posséde une Id générée automatiquement, un numéro de Siret, émail, téléphone, nom, nom du correspondant
+ * @author Mohammed TELIDJANE
+ *
+ */
 
 public class Entreprise {
 	

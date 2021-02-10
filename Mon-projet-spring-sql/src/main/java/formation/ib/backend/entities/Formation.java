@@ -15,6 +15,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "formations")
+/**
+ * Formation est une table qui représente la liste des formations
+ * Elle possède une Id générée automatiquement, un titre, un déscription
+ * @author Mohammed TELIDJANE
+ *
+ */
 
 public class Formation {
 	

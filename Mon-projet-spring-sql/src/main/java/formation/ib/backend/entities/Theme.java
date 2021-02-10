@@ -9,6 +9,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "Themes")
+
+/**
+ * Theme est une table qui représente la liste des thèmes
+ * Elle possède une Id générée automatiquement, un nom
+ * @author Mohammed TELIDJANE
+ *
+ */
 public class Theme {
 	
 	@Id
