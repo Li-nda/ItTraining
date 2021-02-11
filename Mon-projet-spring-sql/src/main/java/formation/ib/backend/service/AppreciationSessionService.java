@@ -50,7 +50,7 @@ public class AppreciationSessionService {
 		return appreciationSessionRepository.findByProjetFormation(projetFormation);
 	}
 	
-	public List<AppreciationSession> findByDate(Date date) {
+	public List<AppreciationSession> findByDate(String date) {
 		return appreciationSessionRepository.findByDate(date);
 	}
 

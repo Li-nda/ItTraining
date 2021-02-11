@@ -11,8 +11,8 @@ public interface SessionRepository extends JpaRepository<Session, Integer> {
 	
 	public List<Session> findByPrixHt(double prixHt);
 	
-	public List<Session> findByDateDebut(Date dateDebut);
+	public List<Session> findByDateDebut(String dateDebut);
 	
-	public List<Session> findByDateFin(Date dateFin);
+	public List<Session> findByDateFin(String dateFin);
 
 }

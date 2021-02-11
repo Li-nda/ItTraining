@@ -34,7 +34,7 @@ public class AppreciationSession {
 	private Boolean projetFormation;
 	
 	@Column(name = "date")
-	private Date date;
+	private String date;
 	
 	@Transient
 	private Session session;
@@ -90,11 +90,11 @@ public class AppreciationSession {
 		this.projetFormation = projetFormation;
 	}
 
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
 

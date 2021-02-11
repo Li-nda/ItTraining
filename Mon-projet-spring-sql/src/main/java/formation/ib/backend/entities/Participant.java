@@ -26,7 +26,7 @@ public class Participant {
 	private String prenom;
 	
 	@Column(name = "date_naissance")
-	private Date dateNaissance;
+	private String dateNaissance;
 	
 	@Transient
 	List<Session> listSession;
@@ -53,6 +53,14 @@ public class Participant {
 
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+
+	public String getDateNaissance() {
+		return dateNaissance;
+	}
+
+	public void setDateNaissance(String dateNaissance) {
+		this.dateNaissance = dateNaissance;
 	}
 
 	public List<Session> getListSession() {

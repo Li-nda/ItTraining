@@ -23,10 +23,10 @@ public class Session {
 	private double prixHt;
 	
 	@Column(name = "date_debut")
-	private Date dateDebut;
+	private String dateDebut;
 	
 	@Column(name = "date_fin")
-	private Date dateFin;
+	private String dateFin;
 	
 	@Transient
 	List<Participant> listParticipant;
@@ -53,19 +53,19 @@ public class Session {
 		this.prixHt = prixHt;
 	}
 
-	public Date getDateDebut() {
+	public String getDateDebut() {
 		return dateDebut;
 	}
 
-	public void setDateDebut(Date dateDebut) {
+	public void setDateDebut(String dateDebut) {
 		this.dateDebut = dateDebut;
 	}
 
-	public Date getDateFin() {
+	public String getDateFin() {
 		return dateFin;
 	}
 
-	public void setDateFin(Date dateFin) {
+	public void setDateFin(String dateFin) {
 		this.dateFin = dateFin;
 	}
 
