@@ -31,37 +31,37 @@ public class AppreciationSessionController {
 		return appreciationSessionService.findAll();
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("id/{id}")
 	public AppreciationSession findById(@PathVariable int id) {
 		return appreciationSessionService.findById(id);
 	}
 	
-	@GetMapping("{noteAccueil}")
+	@GetMapping("noteAccueil/{noteAccueil}")
 	public List<AppreciationSession> findByQualiteAccueil(@PathVariable int noteAccueil) {
 		return appreciationSessionService.findByQualiteAccueil(noteAccueil);
 	}
 	
-	@GetMapping("{noteEnvironnement}")
+	@GetMapping("noteEnvironnement/{noteEnvironnement}")
 	public List<AppreciationSession> findByQualiteEnvironnement(@PathVariable int noteEnvironnement) {
 		return appreciationSessionService.findByQualiteEnvironnement(noteEnvironnement);
 	}
 	
-	@GetMapping("{noteSatisfaction}")
+	@GetMapping("noteSatisfaction/{noteSatisfaction}")
 	public List<AppreciationSession> findBySatisfactionStagiaire(@PathVariable int noteSatisfaction) {
 		return appreciationSessionService.findBySatisfactionStagiaire(noteSatisfaction);
 	}
 	
-	@GetMapping("{recommandeFormation}")
+	@GetMapping("recommandeFormation/{recommandeFormation}")
 	public List<AppreciationSession> findByRecommandeFormation(@PathVariable Boolean recommandeFormation) {
 		return appreciationSessionService.findByRecommandeFormation(recommandeFormation);
 	}
 	
-	@GetMapping("{projetFormation}")
+	@GetMapping("projetFormation/{projetFormation}")
 	public List<AppreciationSession> findByProjetFormation(@PathVariable Boolean projetFormation) {
 		return appreciationSessionService.findByProjetFormation(projetFormation);
 	}
 	
-	@GetMapping("{date}")
+	@GetMapping("date/{date}")
 	public List<AppreciationSession> findByDate(@PathVariable Date date) {
 		return appreciationSessionService.findByDate(date);
 	}

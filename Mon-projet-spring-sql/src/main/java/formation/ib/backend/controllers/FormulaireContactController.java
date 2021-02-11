@@ -30,29 +30,34 @@ public class FormulaireContactController {
 		return formulaireContactService.findAll();
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("id/{id}")
 	public FormulaireContact findById(@PathVariable int id) {
 		return formulaireContactService.findById(id);
 	}
 	
-	@GetMapping("{nom}")
+	@GetMapping("nom/{nom}")
 	public List<FormulaireContact> findByNom(@PathVariable String nom) {
 		return formulaireContactService.findByNom(nom);
 	}
 	
-	@GetMapping("{prenom}")
+	@GetMapping("prenom/{prenom}")
 	public List<FormulaireContact> findByPrenom(@PathVariable String prenom) {
-		return formulaireContactService.findByNom(prenom);
+		return formulaireContactService.findByPrenom(prenom);
 	}
 	
-	@GetMapping("{email}")
-	public List<FormulaireContact> findBtEmail(String email) {
-		return formulaireContactService.findBtEmail(email);
+	@GetMapping("email/{email}")
+	public List<FormulaireContact> findBtEmail(@PathVariable String email) {
+		return formulaireContactService.findByEmail(email);
 	}
 	
-	@GetMapping("{telephone}")
-	public List<FormulaireContact> findByTelephone(String telephone) {
+	@GetMapping("telephone/{telephone}")
+	public List<FormulaireContact> findByTelephone(@PathVariable String telephone) {
 		return formulaireContactService.findByTelephone(telephone);
+	}
+	
+	@GetMapping("message/{message}")
+	public List<FormulaireContact> findByMessage(@PathVariable String message) {
+		return formulaireContactService.findByMessage(message);
 	}
 
 }

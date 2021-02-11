@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name = "participant")
@@ -27,7 +28,8 @@ public class Participant {
 	@Column(name = "date_naissance")
 	private Date dateNaissance;
 	
-	//List<Session> listSession;
+	@Transient
+	List<Session> listSession;
 
 	public int getId() {
 		return id;
@@ -53,15 +55,11 @@ public class Participant {
 		this.prenom = prenom;
 	}
 
-//	public List<Session> getListSession() {
-//		return listSession;
-//	}
-//
-//	public void setListSession(List<Session> listSession) {
-//		this.listSession = listSession;
-//	}
-	
-	
-	
+	public List<Session> getListSession() {
+		return listSession;
+	}
 
+	public void setListSession(List<Session> listSession) {
+		this.listSession = listSession;
+	}
 }

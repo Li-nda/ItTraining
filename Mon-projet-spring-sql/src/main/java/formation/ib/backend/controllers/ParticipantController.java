@@ -31,22 +31,22 @@ public class ParticipantController {
 		return participantService.findAll();
 	}
 
-	@GetMapping("{id}")
+	@GetMapping("id/{id}")
 	public Participant findById(@PathVariable int id) {
 		return participantService.findById(id);
 	}
 	
-	@GetMapping("{nom}")
+	@GetMapping("nom/{nom}")
 	public List<Participant> findByNom(@PathVariable String nom) {
 		return participantService.findByNom(nom);
 	}
 	
-	@GetMapping("{prenom}")
+	@GetMapping("prenom/{prenom}")
 	public List<Participant> findByPrenom(@PathVariable String prenom) {
 		return participantService.findByPrenom(prenom);
 	}
 	
-	@GetMapping("{date}")
+	@GetMapping("date/{date}")
 	public List<Participant> findByDateNaissance(@PathVariable Date date) {
 		return participantService.findByDateNaissance(date);
 	}

@@ -15,5 +15,7 @@ public interface FormulaireContactRepository extends JpaRepository<FormulaireCon
 	public List<FormulaireContact> findByEmail(String email);
 	
 	public List<FormulaireContact> findByTelephone(String telephone);
+	
+	public List<FormulaireContact> findByMessage(String message);
 
 }

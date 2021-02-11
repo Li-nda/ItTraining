@@ -31,22 +31,22 @@ public class SessionController {
 		return sessionService.findAll();
 	}
 	
-	@GetMapping("{id}")
+	@GetMapping("id/{id}")
 	public Session findById(@PathVariable int id) {
 		return sessionService.findById(id);
 	}
 	
-	@GetMapping("{prix}")
+	@GetMapping("prix/{prix}")
 	public List<Session> findByPrixHt(@PathVariable double prix) {
 		return sessionService.findByPrixHt(prix);
 	}
 	
-	@GetMapping("{dateDebut}")
+	@GetMapping("dateDebut/{dateDebut}")
 	public List<Session> findByDateDebut(@PathVariable Date dateDebut) {
 		return sessionService.findByDateDebut(dateDebut);
 	}
 	
-	@GetMapping("{dateFin}")
+	@GetMapping("dateFin/{dateFin}")
 	public List<Session> findByDateFin(@PathVariable Date dateFin) {
 		return sessionService.findByDateFin(dateFin);
 	}

@@ -35,15 +35,19 @@ public class FormulaireContactService {
 	}
 	
 	public List<FormulaireContact> findByPrenom(String prenom) {
-		return formulaireContactRepository.findByNom(prenom);
+		return formulaireContactRepository.findByPrenom(prenom);
 	}
 	
-	public List<FormulaireContact> findBtEmail(String email) {
+	public List<FormulaireContact> findByEmail(String email) {
 		return formulaireContactRepository.findByEmail(email);
 	}
 	
 	public List<FormulaireContact> findByTelephone(String telephone) {
 		return formulaireContactRepository.findByTelephone(telephone);
+	}
+	
+	public List<FormulaireContact> findByMessage(String message) {
+		return formulaireContactRepository.findByMessage(message);
 	}
 
 }
