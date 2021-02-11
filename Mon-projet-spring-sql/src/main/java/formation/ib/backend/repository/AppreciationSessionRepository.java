@@ -21,5 +21,5 @@ public interface AppreciationSessionRepository extends JpaRepository<Appreciatio
 	
 	public List<AppreciationSession> findByProjetFormation(Boolean projetFormation);
 	
-	public List<AppreciationSession> findByDate(Date date);
+	public List<AppreciationSession> findByDate(String date);
 }

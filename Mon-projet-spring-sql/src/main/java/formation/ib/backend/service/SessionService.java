@@ -34,11 +34,11 @@ public class SessionService {
 		return sessionRepository.findByPrixHt(prixHt);
 	}
 	
-	public List<Session> findByDateDebut(Date dateDebut) {
+	public List<Session> findByDateDebut(String dateDebut) {
 		return sessionRepository.findByDateDebut(dateDebut);
 	}
 	
-	public List<Session> findByDateFin(Date dateFin) {
+	public List<Session> findByDateFin(String dateFin) {
 		return sessionRepository.findByDateFin(dateFin);
 	}
 	

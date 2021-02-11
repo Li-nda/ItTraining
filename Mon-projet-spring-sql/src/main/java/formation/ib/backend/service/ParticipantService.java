@@ -38,7 +38,7 @@ public class ParticipantService {
 		return participantrepository.findByPrenom(prenom);
 	}
 	
-	public List<Participant> findByDateNaissance(Date date) {
+	public List<Participant> findByDateNaissance(String date) {
 		return participantrepository.findByDateNaissance(date);
 	}
 }

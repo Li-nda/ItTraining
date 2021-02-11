@@ -42,12 +42,12 @@ public class SessionController {
 	}
 	
 	@GetMapping("dateDebut/{dateDebut}")
-	public List<Session> findByDateDebut(@PathVariable Date dateDebut) {
+	public List<Session> findByDateDebut(@PathVariable String dateDebut) {
 		return sessionService.findByDateDebut(dateDebut);
 	}
 	
 	@GetMapping("dateFin/{dateFin}")
-	public List<Session> findByDateFin(@PathVariable Date dateFin) {
+	public List<Session> findByDateFin(@PathVariable String dateFin) {
 		return sessionService.findByDateFin(dateFin);
 	}
 

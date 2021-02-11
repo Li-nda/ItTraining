@@ -13,5 +13,5 @@ public interface ParticipantRepository extends JpaRepository<Participant, Intege
 
 	public List<Participant> findByPrenom(String prenom);
 	
-	public List<Participant> findByDateNaissance(Date date);
+	public List<Participant> findByDateNaissance(String date);
 }

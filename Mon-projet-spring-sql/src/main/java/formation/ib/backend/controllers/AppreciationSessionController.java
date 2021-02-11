@@ -15,7 +15,7 @@ import formation.ib.backend.entities.AppreciationSession;
 import formation.ib.backend.service.AppreciationSessionService;
 
 @RestController
-@RequestMapping("AppreciationSession")
+@RequestMapping("appreciationsession")
 public class AppreciationSessionController {
 	
 	@Autowired
@@ -62,7 +62,7 @@ public class AppreciationSessionController {
 	}
 	
 	@GetMapping("date/{date}")
-	public List<AppreciationSession> findByDate(@PathVariable Date date) {
+	public List<AppreciationSession> findByDate(@PathVariable String date) {
 		return appreciationSessionService.findByDate(date);
 	}
 	

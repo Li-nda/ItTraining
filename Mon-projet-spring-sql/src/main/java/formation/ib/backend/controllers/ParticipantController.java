@@ -47,7 +47,7 @@ public class ParticipantController {
 	}
 	
 	@GetMapping("date/{date}")
-	public List<Participant> findByDateNaissance(@PathVariable Date date) {
+	public List<Participant> findByDateNaissance(@PathVariable String date) {
 		return participantService.findByDateNaissance(date);
 	}
 	
