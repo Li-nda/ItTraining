@@ -57,6 +57,13 @@ local.properties
 
 # sbteclipse plugin
 .target
+.classpath
+.project
+MANIFEST.MF
+pom.properties
+pom.xml
+aplication.yml
+
 
 # Tern plugin
 .tern-project
@@ -74,10 +81,6 @@ local.properties
 .apt_generated/
 .apt_generated_test/
 
-# Scala IDE specific (Scala & Java development for Eclipse)
-.cache-main
-.scala_dependencies
-.worksheet
 
 # Uncomment this line if you wish to ignore the project description file.
 # Typically, this file would be tracked if it contains build/dependency configurations:
