@@ -1,6 +1,5 @@
 package formation.ib.backend.service;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,9 @@ public class SessionService {
 		return sessionRepository.findByDateFin(dateFin);
 	}
 	
-	
+	public void deleteById(int id) {
+		this.sessionRepository.deleteById(id);
+	}
 	
 	
 
