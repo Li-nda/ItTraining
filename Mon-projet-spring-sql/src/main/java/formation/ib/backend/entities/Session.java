@@ -1,6 +1,6 @@
 package formation.ib.backend.entities;
 
-import java.util.Date;
+
 import java.util.List;
 
 import javax.persistence.Column;
@@ -8,9 +8,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-
 @Entity
 @Table(name = "session")
 public class Session {
@@ -28,13 +31,17 @@ public class Session {
 	@Column(name = "date_fin")
 	private String dateFin;
 	
-	@Transient
-	List<Participant> listParticipant;
+	@ManyToMany
+	@JoinTable(
+			name = "session_possede_participant",
+			joinColumns = @JoinColumn(name = "session_id"),
+			inverseJoinColumns = @JoinColumn(name = "participant_id"))
+	private List<Participant> listParticipant;
 	
-	@Transient
+	@OneToMany(targetEntity = AppreciationSession.class, mappedBy = "session")
 	private List<AppreciationSession> appreciationSession;
 	
-	@Transient
+	@ManyToOne @JoinColumn(name = "formation_id")
 	private Formation formation;
 
 	public int getId() {
@@ -75,6 +82,24 @@ public class Session {
 
 	public void setListParticipant(List<Participant> listParticipant) {
 		this.listParticipant = listParticipant;
+	}
+
+	public List<AppreciationSession> getAppreciationSession() {
+		return appreciationSession;
+	}
+
+	public void setAppreciationSession(List<AppreciationSession> appreciationSession) {
+		this.appreciationSession = appreciationSession;
+	}
+
+	public Formation getFormation() {
+		return formation;
+	}
+
+	public void setFormation(Formation formation) {
+		this.formation = formation;
 	}	
+	
+	
 	
 }

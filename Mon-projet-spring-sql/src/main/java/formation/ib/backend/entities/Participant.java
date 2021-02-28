@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -28,8 +29,8 @@ public class Participant {
 	@Column(name = "date_naissance")
 	private String dateNaissance;
 	
-	@Transient
-	List<Session> listSession;
+	@OneToMany(targetEntity = AppreciationSession.class, mappedBy = "participant")
+	private List<AppreciationSession> appreciationSession;
 
 	public int getId() {
 		return id;
@@ -63,11 +64,13 @@ public class Participant {
 		this.dateNaissance = dateNaissance;
 	}
 
-	public List<Session> getListSession() {
-		return listSession;
+	public List<AppreciationSession> getAppreciationSession() {
+		return appreciationSession;
 	}
 
-	public void setListSession(List<Session> listSession) {
-		this.listSession = listSession;
+	public void setAppreciationSession(List<AppreciationSession> appreciationSession) {
+		this.appreciationSession = appreciationSession;
 	}
+
+	
 }
