@@ -69,12 +69,5 @@ public class Session {
 		this.dateFin = dateFin;
 	}
 
-	public List<Participant> getListParticipant() {
-		return listParticipant;
-	}
-
-	public void setListParticipant(List<Participant> listParticipant) {
-		this.listParticipant = listParticipant;
-	}	
 	
 }
