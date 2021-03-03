@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,10 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import formation.ib.backend.entities.Formateur;
 import formation.ib.backend.service.FormateurService;
 
-
-
 @RestController
-@RequestMapping("formateur")
+@RequestMapping("formateurs")
 @CrossOrigin
 
 public class FormateurController {
@@ -40,5 +39,15 @@ public class FormateurController {
 	public Formateur findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
+	
+	@DeleteMapping("id/{id}")
+	public void deleteById(@PathVariable Long id) {
+		service.deleteById(id);
+	}
+	
+//	@DeleteMapping("id/{id}")
+//	public void deleteById(@PathVariable Long id) {
+//		service.deleteById(id);
+//	}
 
 }
