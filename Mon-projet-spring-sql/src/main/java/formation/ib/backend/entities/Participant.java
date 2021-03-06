@@ -14,6 +14,12 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "participant")
+/**
+ * Cette classe représente un participant du centre de formation
+ * Elle permet la création des objet de type Participant
+ * @author IB
+ *
+ */
 public class Participant {
 	
 	@Id
@@ -29,8 +35,8 @@ public class Participant {
 	@Column(name = "date_naissance")
 	private String dateNaissance;
 	
-	@OneToMany(targetEntity = AppreciationSession.class, mappedBy = "participant")
-	private List<AppreciationSession> appreciationSession;
+//	@OneToMany(targetEntity = AppreciationSession.class, mappedBy = "participant")
+//	private List<AppreciationSession> appreciationSession;
 
 	public int getId() {
 		return id;
@@ -64,13 +70,14 @@ public class Participant {
 		this.dateNaissance = dateNaissance;
 	}
 
-	public List<AppreciationSession> getAppreciationSession() {
-		return appreciationSession;
-	}
-
-	public void setAppreciationSession(List<AppreciationSession> appreciationSession) {
-		this.appreciationSession = appreciationSession;
-	}
-
+//	public List<AppreciationSession> getAppreciationSession() {
+//		return appreciationSession;
+//	}
+//
+//	public void setAppreciationSession(List<AppreciationSession> appreciationSession) {
+//		this.appreciationSession = appreciationSession;
+//	}
+	
+	
 	
 }

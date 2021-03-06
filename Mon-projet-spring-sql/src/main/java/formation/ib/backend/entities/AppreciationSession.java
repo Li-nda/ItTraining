@@ -35,11 +35,11 @@ public class AppreciationSession {
 	@Column(name = "date")
 	private String date;
 	
-	@ManyToOne @JoinColumn(name = "session_id")
-	private Session session;
+//	@ManyToOne @JoinColumn(name = "session_id")
+//	private Session session;
 	
-	@ManyToOne @JoinColumn(name = "participant_id")
-	private Participant participant;
+//	@ManyToOne @JoinColumn(name = "participant_id")
+//	private Participant participant;
 
 	public int getId() {
 		return id;
@@ -97,21 +97,21 @@ public class AppreciationSession {
 		this.date = date;
 	}
 
-	public Session getSession() {
-		return session;
-	}
+//	public Session getSession() {
+//		return session;
+//	}
+//
+//	public void setSession(Session session) {
+//		this.session = session;
+//	}
 
-	public void setSession(Session session) {
-		this.session = session;
-	}
-
-	public Participant getParticipant() {
-		return participant;
-	}
-
-	public void setParticipant(Participant participant) {
-		this.participant = participant;
-	}
+//	public Participant getParticipant() {
+//		return participant;
+//	}
+//
+//	public void setParticipant(Participant participant) {
+//		this.participant = participant;
+//	}
 	
 	
 }
